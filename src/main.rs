@@ -88,35 +88,3 @@ fn n7_from_date(date: &NaiveDate, is_male: bool) -> u8 {
         _ => 0,
     }
 }
-
-// fn chksum(s: &str) -> Option<u32> {
-//     let mut n12: u32 = s
-//         .chars()
-//         .enumerate()
-//         .map(|(i, c)| (i as u32 + 1) * c.to_digit(10).unwrap())
-//         .sum::<u32>()
-//         % 11;
-
-//     if n12 == 10 {
-//         n12 = {
-//             let multipliers = [3, 4, 5, 6, 7, 8, 9, 10, 11, 1, 2];
-//             if s.len() != multipliers.len() {
-//                 return None;
-//             }
-//             s.chars()
-//                 .zip(multipliers.iter())
-//                 .map(|(c, &m)| c.to_digit(10).map(|d| d * m))
-//                 .collect::<Option<Vec<u32>>>()
-//                 .map(|products| products.into_iter().sum::<u32>())
-//                 .unwrap()
-//                 % 11
-//         };
-//         if n12 == 10 {
-//             None
-//         } else {
-//             Some(n12)
-//         }
-//     } else {
-//         Some(n12)
-//     }
-// }
