@@ -1,5 +1,3 @@
-// date.rs
-
 use chrono::{Duration, NaiveDate};
 
 /// Represents a date along with its formatted string representation.
