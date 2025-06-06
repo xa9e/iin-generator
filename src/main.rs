@@ -11,7 +11,8 @@ fn main() {
 pub fn gen(start: &str, end: &str, is_male: bool, take_in_a_day: u16) {
     for info in dates_between(start, end) {
         let n7 = n7_from_date(&info.date, is_male);
-        for n8_11 in 0..=take_in_a_day {
+        // This range yields exactly `take_in_a_day` values from 0 to take_in_a_day - 1
+        for n8_11 in 0..take_in_a_day {
             let t = format!("{}{}{:04}", info.formatted, n7, n8_11);
             if let Some(n12) = chksum(&t) {
                 println!("{t}{n12}");
