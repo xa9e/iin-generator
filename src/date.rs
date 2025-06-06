@@ -5,7 +5,7 @@ use chrono::{Duration, NaiveDate};
 pub struct DateInfo {
     /// The full `NaiveDate` instance.
     pub date: NaiveDate,
-    /// The formatted date string in the "DDMMYY" format.
+    /// The formatted date string in the "YYMMDD" format.
     pub formatted: String,
 }
 
